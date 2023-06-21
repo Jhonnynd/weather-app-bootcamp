@@ -24,7 +24,7 @@ class App extends React.Component {
     e.preventDefault();
     axios
       .get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${this.state.inputCity}&limit=5&appid=${process.env.REACT_APP_API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${this.state.inputCity}&limit=5&appid=${process.env.REACT_APP_API_KEY}`
       )
       .then((response) => response.data[0])
       .then((cityGeoData) =>
